@@ -52,9 +52,9 @@ public class InstructorTest {
         //Given
         Instructor instructor = new Instructor(1, "Wakanda");
         Student student1 = new Student(2, "Earth", 5.0);
-        Student student2 = new Student(3, "Wind", 0.0);
-        Student student3 = new Student(4, "Fire", 12.0);
-        Student student4 = new Student(5, "Water", 20.0);
+        Student student2 = new Student(3, "Wind", 10.0);
+        Student student3 = new Student(4, "Fire", 20.0);
+        Student student4 = new Student(5, "Water", 0.0);
         Student[] students = {student1, student2, student3, student4};
 
         //When
