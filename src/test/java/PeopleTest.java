@@ -14,7 +14,7 @@ public class PeopleTest {
         Person person1 = new Person(001, "Earth");
         Person person2 = new Person(002, "Wind");
         Person person3 = new Person(003, "Fire");
-        People people = new People(niggaList);
+        People people = new People();
         //When
         people.add(person1);
         people.add(person2);
@@ -26,7 +26,7 @@ public class PeopleTest {
     @Test
     public void removeTest(){
         //Given
-        People people = new People(niggaList);
+        People people = new People();
         Person person1 = new Person(001, "Earth");
         Person person2 = new Person(002, "Wind");
         Person person3 = new Person(003, "Fire");
@@ -45,7 +45,7 @@ public class PeopleTest {
     @Test
     public void findByIdTest(){
         //Given
-        People people = new People(niggaList);
+        People people = new People();
         Person person1 = new Person(001, "Earth");
         Person person2 = new Person(002, "Wind");
         people.add(person1);

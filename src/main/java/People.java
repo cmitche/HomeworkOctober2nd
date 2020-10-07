@@ -1,73 +1,46 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-public class People implements Iterable{
-     private List<Person> personList = new ArrayList<>();
-
-     public People(){
-     }
-
-    public People(List<Person> personList){
-         this.personList = personList;
-    }
-
-//    public People(List<Person> personList) {
-//        this.personList = personList;
-//    }
-
-    public void add(Person person){
+public class People<E extends Person> implements Iterable<E> {
+    List<E> personList =new ArrayList<E>();
+    public void add(E person) {
         personList.add(person);
     }
-
-    public Person findById(Long id){
-        for(Person person : personList){
-            if(person.getId() == id){
+    public E findById(long id) {
+        for (E person: personList) {
+            if (person.getId() == id) {
                 return person;
             }
         }
         return null;
     }
-
-    public boolean contains(Person person){
-        return personList.contains(person);
+    public boolean contains(E person) {
+        return (personList.contains(person));
     }
-
-    public void remove(Person person){
-        personList.remove(person);
-    }
-
-    public void remove(Long id){
-        for(Person person : personList){
-            if(id == person.getId()){
-                personList.remove(person);
-            }
+    public void remove(E person) {
+        if (contains(person)) {
+            personList.remove(person);
         }
     }
-
-    public void removeAll(){
+    public void remove(long id) {
+        personList.removeIf(person -> person.getId() == id);
+    }
+    public void removeAll() {
         personList.clear();
     }
-
-    public int count(){
+    public int count() {
         return personList.size();
     }
-
-    public Object[] toArray(){
-        return personList.toArray();
+    public Person[] toArray(){
+        return personList.toArray(new Person[0]);
     }
-
-    @Override
-    public Iterator iterator(){
+    public Iterator<E> iterator() {
         return personList.iterator();
     }
-
-    public List<Person> getPersonList() {
-        return personList;
-    }
-
-    public void setPersonList(List<Person> personList) {
-        this.personList = personList;
-    }
 }
+
+
+
+
+
+
