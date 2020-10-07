@@ -5,7 +5,7 @@ public class StudentTest {
     @Test
     public void testImplementation(){
         //Given
-        Student student = new Student(123, "Corey", 0.0);
+        Student student = new Student(123, "Corey");
 
         //When
         boolean expected = true;
@@ -18,7 +18,7 @@ public class StudentTest {
     @Test
     public void testInheritance(){
         //Given
-        Student student = new Student(123, "Corey", 0.0);
+        Student student = new Student(123, "Corey");
 
         //When
         boolean expected = true;
@@ -31,7 +31,7 @@ public class StudentTest {
     @Test
     public void testLearn(){
         //Given
-        Student student = new Student(123, "Corey", 0.0);
+        Student student = new Student(123, "Corey");
         student.learn(20.0);
 
         //When

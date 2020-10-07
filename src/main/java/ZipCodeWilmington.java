@@ -2,8 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ZipCodeWilmington {
-    Students students;
-    Instructors instructors;
+    Students students = Students.getInstance();
+    Instructors instructors = Instructors.getInstance();
 
     //1. Static instance
     static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();

@@ -35,12 +35,12 @@ public class InstructorTest {
     public void testTeach(){
         //Given
         Instructor instructor = new Instructor(123, "Susan");
-        Student student = new Student(132, "Gloria", 5.0);
+        Student student = new Student(132, "Gloria");
         instructor.teach(student, 10.0);
 
         //When
         double actual = student.getTotalStudyTime();
-        double expected = 15.0;
+        double expected = 10.0;
         double delta = 0.0;
 
         //Then
@@ -51,13 +51,14 @@ public class InstructorTest {
     public void testLecture(){
         //Given
         Instructor instructor = new Instructor(1, "Wakanda");
-        Student student1 = new Student(2, "Earth", 5.0);
-        Student student2 = new Student(3, "Wind", 10.0);
-        Student student3 = new Student(4, "Fire", 20.0);
-        Student student4 = new Student(5, "Water", 0.0);
+        Student student1 = new Student(2, "Earth");
+        Student student2 = new Student(3, "Wind");
+        Student student3 = new Student(4, "Fire");
+        Student student4 = new Student(5, "Water");
         Student[] students = {student1, student2, student3, student4};
 
         //When
+        student1.setTotalStudyTime(5.0);
         instructor.lecture(students, 100.0);
         double expected = student1.getTotalStudyTime();//30
         double actual = 30;

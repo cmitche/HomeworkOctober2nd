@@ -4,7 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentsSingletonTest {
+public class StudentsTest {
     @Test
     public void getInstanceTest(){
         //Given

@@ -16,6 +16,10 @@ public class Students extends People<Student>{
 
     //4. Create a toArray method that returns a Student array.
     public Student[] toArray(){
-        return personList.toArray(new Student[personList.size()]);
+        Student[] students = new Student[getPersonList().size()];
+        for(int index = 0; index < getPersonList().size(); index++){
+            students[index] = getPersonList().get(index);
+        }
+        return students;
     }
 }
