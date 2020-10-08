@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 public class People<E extends Person> implements Iterable<E> {
-    List<E> personList =new ArrayList<E>();
+    List<E> personList = new ArrayList<E>();
     public void add(E person) {
         personList.add(person);
     }

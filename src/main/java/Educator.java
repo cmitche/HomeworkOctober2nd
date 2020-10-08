@@ -25,4 +25,8 @@ public enum Educator implements ITeacher{
     public Instructor getInstructor(){
         return instructor;
     }
+
+    public double getTimeWorked() {
+        return timeWorked;
+    }
 }

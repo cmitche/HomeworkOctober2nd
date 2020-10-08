@@ -8,11 +8,15 @@ public class ZipCodeWilmingtonTest {
     public void hostLectureTest1(){
         //ZipCodeObject
         ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
+        //Student object
         Student student = Students.getInstance().findById(1L);
+        student.setTotalStudyTime(0.0);
+        //Instructor object
         Instructor instructor = Educator.ALYSSA.getInstructor();
-        student.setTotalStudyTime(10.0);
+        //Invoke the hostLecture method
         zipCodeWilmington.hostLecture(instructor, 30.0);
+        //
         double actual = Students.getInstance().findById(1L).getTotalStudyTime();//30
-        Assert.assertTrue(actual == 20.0);
+        Assert.assertEquals(actual, 10.0, 0.0);
     }
 }
